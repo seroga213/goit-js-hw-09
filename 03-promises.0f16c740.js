@@ -1,0 +1,2 @@
+function e(e,i){return new Promise(((t,o)=>{setTimeout((()=>{Math.random()>.3?t({position:e,delay:i}):o({position:e,delay:i})}),i)}))}refs.btnCreatePromise.addEventListener("click",(function(i){i.preventDefault();let t=Number(refs.delay.value),o=Number(refs.step.value);for(let i=0;i<refs.amount.value;i+=1)e(i+1,t+i*o).then((({position:e,delay:i})=>{Notiflix.Notify.success(`Fulfilled promise ${e} in ${i}ms`)})).catch((({position:e,delay:i})=>{Notiflix.Notify.failure(`Rejected promise ${e} in ${i}ms`)}))}));
+//# sourceMappingURL=03-promises.0f16c740.js.map
